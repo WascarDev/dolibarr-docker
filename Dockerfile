@@ -1,6 +1,6 @@
 FROM alpine:3.12
 
-LABEL maintainer="docker@upshift.fr"
+LABEL maintainer="admin@wascardev.com"
 
 RUN set -eux; \
 	# install needed packages
