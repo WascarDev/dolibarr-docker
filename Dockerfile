@@ -86,7 +86,7 @@ ENV PHP_INI_memory_limit=256M
 ENV PHP_INI_max_execution_time=60
 
 ENV LANG fr_FR
-ENV HEALTURL localhost
+ENV PROXYURL localhost
 
 VOLUME /var/www/html
 VOLUME /var/www/documents
@@ -106,7 +106,7 @@ WORKDIR /var/www/html
 
 EXPOSE 80/tcp
 
-HEALTHCHECK --interval=1m --timeout=30s --retries=3 CMD curl --fail http://${HEALTURL} || exit 1
+HEALTHCHECK --interval=1m --timeout=30s --retries=3 CMD curl --fail https://${PROXYURL} || exit 1
 
 COPY /src/docker-entrypoint /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint"]
