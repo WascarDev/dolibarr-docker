@@ -106,7 +106,7 @@ WORKDIR /var/www/html
 
 EXPOSE 80/tcp
 
-HEALTHCHECK --interval=1m --timeout=30s --retries=3 CMD curl --fail http://${HEALTURL}:2368 || exit 1
+HEALTHCHECK --interval=1m --timeout=30s --retries=3 CMD curl --fail http://${HEALTURL} || exit 1
 
 COPY /src/docker-entrypoint /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint"]
