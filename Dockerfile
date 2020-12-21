@@ -7,7 +7,6 @@ RUN set -eux; \
 	# see https://wiki.dolibarr.org/index.php/Dependencies_and_external_libraries
 	apk add --no-cache \
 		bash \
-		curl \
 		openssl \
 		rsync \
 		apache2 \
@@ -86,7 +85,6 @@ ENV PHP_INI_memory_limit=256M
 ENV PHP_INI_max_execution_time=60
 
 ENV LANG fr_FR
-ENV PROXYURL localhost
 
 VOLUME /var/www/html
 VOLUME /var/www/documents
@@ -105,8 +103,6 @@ RUN set -eux; \
 WORKDIR /var/www/html
 
 EXPOSE 80/tcp
-
-HEALTHCHECK --interval=1m --timeout=30s --retries=3 CMD curl --fail https://${PROXYURL} || exit 1
 
 COPY /src/docker-entrypoint /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint"]
