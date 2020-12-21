@@ -18,7 +18,7 @@ services:
         - MYSQL_USER=dolibarr
         - MYSQL_PASSWORD=dolibarr
         - MYSQL_RANDOM_ROOT_PASSWORD=yes
-        - HEALTHURL=doli_container
+        - PROXYURL=proxysitename.example
 
   dolibarr:
     image: upshift/dolibarr:latest
