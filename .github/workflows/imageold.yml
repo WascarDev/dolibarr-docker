@@ -40,5 +40,4 @@ jobs:
           push: true
           tags: |
             wascardev/dolibarr-arm:latest, wascardev/dolibarr-arm:12.0.3
-3
             
