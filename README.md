@@ -1,5 +1,6 @@
 # Dolibarr application server
 
+
 Docker image for [Dolibarr ERP](https://www.dolibarr.org).
 
 Provides full database configuration, production mode, HTTPS enforcer (SSL must be provided by reverse proxy), handles upgrades, and so on...
