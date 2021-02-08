@@ -11,6 +11,8 @@ This image does not contain the database for Dolibarr. You need to use either an
 
 To start the container type:
 
+#BE CAREFULL 13.0.0 IS BUGGY WITH PGSQL FOR MIGRATING 12.0.4, PREFER LATEST IN ROLLING
+
 ```console
 # docker run -d -p 8080:80 --link my-db:db upshift/dolibarr
 ```
