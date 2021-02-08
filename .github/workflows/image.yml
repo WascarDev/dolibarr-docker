@@ -41,7 +41,7 @@ jobs:
           tags: |
             wascardev/dolibarr-arm:latest-rolling
 
-      - name: Build and push
+      - name: Build and push stable
         uses: docker/build-push-action@v2
         with:
           context: .
@@ -51,7 +51,7 @@ jobs:
           tags: |
            wascardev/dolibarr-arm:latest
             
-      - name: Build and push
+      - name: Build and push old version
         uses: docker/build-push-action@v2
         with:
           context: .
